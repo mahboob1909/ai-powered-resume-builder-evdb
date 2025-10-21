@@ -1,0 +1,20 @@
+{
+  "name": "ai-resume-builder-backend",
+  "version": "1.0.0",
+  "description": "Backend services for AI Resume Builder",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:user\" \"npm run dev:resume\" \"npm run dev:pdf\"",
+    "dev:user": "cd services/user-service && npm run dev",
+    "dev:resume": "cd services/resume-service && npm run dev",
+    "dev:pdf": "cd services/pdf-service && npm run dev",
+    "build": "npm run build:user && npm run build:resume && npm run build:pdf",
+    "build:user": "cd services/user-service && npm run build",
+    "build:resume": "cd services/resume-service && npm run build",
+    "build:pdf": "cd services/pdf-service && npm run build",
+    "install:all": "cd services/user-service && npm install && cd ../resume-service && npm install && cd ../pdf-service && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

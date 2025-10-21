@@ -1,0 +1,70 @@
+# Product Requirements Document (PRD): AI-Powered Resume Builder
+
+## 1. Introduction
+This document outlines the product requirements for an AI-Powered Resume Builder. The application will solve the common problem job seekers face in creating professional, effective, and keyword-optimized resumes that stand out to both human recruiters and Applicant Tracking Systems (ATS). By leveraging advanced AI, the platform will offer smart content suggestions, automated formatting, and personalized guidance, simplifying and enhancing the resume creation process.
+
+## 2. Vision & Goals
+**Vision:** To empower job seekers worldwide to land their dream jobs by providing an intelligent and intuitive tool that helps them create compelling, professional resumes with ease.
+
+**Business Goals:**
+*   Achieve a significant user base within the first year through a freemium model.
+*   Establish the platform as a leader in the AI-powered career tools space.
+*   Generate sustainable revenue through a tiered subscription model and premium add-ons.
+*   Maintain a high user satisfaction and success rate.
+
+## 3. Target Audience
+The target audience is global and diverse, including:
+*   **Recent Graduates:** Individuals with limited work experience needing to highlight their skills and education effectively.
+*   **Experienced Professionals:** Job seekers looking to tailor their resumes for specific roles or career changes.
+*   **Career Changers:** Individuals transitioning to a new industry who need to reframe their experience.
+*   **Students:** Those preparing for internships and their first jobs.
+
+## 4. Features & Functionalities
+
+### **Core Features (MVP)**
+*   **User Authentication:** Secure sign-up and login (Email/Password, Google, LinkedIn).
+*   **Resume Creator:**
+    *   Intuitive, step-by-step wizard for entering personal information, work experience, education, skills, etc.
+    *   A selection of modern, professionally designed templates.
+    *   Real-time preview of the resume as the user types.
+*   **AI Content Suggestions:**
+    *   AI-powered suggestions for job description bullet points based on job title and industry.
+    *   Grammar and spell-checking.
+*   **Basic ATS Optimization:** Real-time feedback on keyword usage and formatting for ATS compatibility.
+*   **Export & Download:** Ability to download the resume in PDF format.
+
+### **Advanced Features (Post-MVP / Premium Tiers)**
+*   **Advanced AI Capabilities:**
+    *   Personalized content recommendations based on a specific job description (user pastes the description).
+    *   AI-driven analysis and scoring of the resume's effectiveness.
+    *   Tone and style suggestions.
+*   **Expanded Template Library:** A wider variety of premium, industry-specific templates.
+*   **Cover Letter Builder:** An integrated tool to create matching cover letters, with AI suggestions.
+*   **LinkedIn Profile Integration:** Import existing data from a user's LinkedIn profile to auto-fill resume sections.
+*   **Career Guidance:**
+    *   AI-powered skill gap analysis.
+    *   Interview preparation tips and common questions.
+*   **Multi-format Export:** Export resumes in DOCX and TXT formats.
+*   **Analytics:** Track resume views and downloads when shared via a public link.
+
+## 5. Design & UX Requirements
+*   **UI/UX:** Modern, sleek, clean, and intuitive. The user journey should be seamless and guided.
+*   **Hero Section:** The landing page must feature an eye-catching animated background with a parallax scrolling effect to create a dynamic and engaging first impression.
+*   **Calls-to-Action (CTAs):** Clear, well-designed, and strategically placed CTAs (e.g., "Create Your Resume Now," "Upgrade to Premium").
+*   **Pricing Section:** A clear, comparative, and visually appealing pricing table outlining the features of each tier (Free, Pro, Executive).
+*   **Footer:** A comprehensive footer with links to About Us, Contact, FAQ, Terms of Service, Privacy Policy, and social media profiles.
+*   **Responsiveness:** The application must be fully responsive and optimized for desktop, tablet, and mobile devices.
+
+## 6. Monetization
+*   **Freemium Model:**
+    *   **Free Tier:** Access to basic features, a limited number of templates, and a limited number of downloads, possibly with a watermark.
+    *   **Subscription Tiers (Pro/Executive):** Monthly/annual subscriptions unlocking premium features, unlimited downloads, no watermark, advanced AI analysis, cover letter builder, etc.
+*   **One-time Purchases:** Option to purchase a premium template or a single resume download without a subscription.
+
+## 7. Success Metrics
+*   Number of active users (daily/monthly).
+*   Conversion rate from free to paid tiers.
+*   User satisfaction scores (e.g., NPS).
+*   Number of resumes created and downloaded.
+*   User retention rate.
+

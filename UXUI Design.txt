@@ -1,0 +1,46 @@
+# UX/UI Design Guidelines: AI-Powered Resume Builder
+
+## 1. Overall Philosophy
+The design should be **modern, sleek, eye-catching, and trustworthy**. The user experience must be intuitive and empowering, reducing the stress of resume writing and instilling confidence in the user. The interface should be clean and uncluttered, guiding the user seamlessly through the creation process.
+
+## 2. Color Palette
+*   **Primary:** A professional and calming blue (e.g., `#4A90E2`) or a sophisticated dark teal (e.g., `#004D40`).
+*   **Secondary/Accent:** A vibrant, encouraging color for CTAs and highlights (e.g., a warm orange `#F5A623` or a bright green `#7ED321`).
+*   **Neutral:** Shades of grey for text and backgrounds (e.g., `#F5F7FA` for light backgrounds, `#333333` for text).
+
+## 3. Typography
+*   **Headings:** A modern, clean sans-serif font like **Inter**, **Poppins**, or **Manrope**.
+*   **Body Text:** A highly readable sans-serif font like **Inter** or **Open Sans**.
+*   Ensure a clear typographic hierarchy and sufficient font sizes for readability.
+
+## 4. Key Sections Design
+
+### **Landing Page Hero Section**
+*   **Background:** A high-quality, abstract animated background. The animation should be subtle (e.g., slowly moving geometric shapes, flowing gradients, or particle effects).
+*   **Parallax Effect:** Implement a multi-layered parallax effect. The background, headline, and CTA button should move at different speeds upon scrolling to create a sense of depth and dynamism.
+*   **Headline:** A powerful, benefit-oriented headline (e.g., "Build Your Future. Land Your Dream Job with an AI-Powered Resume.").
+*   **CTA:** A prominent, high-contrast "Create My Resume for Free" button.
+
+### **Resume Creation Interface**
+*   **Layout:** A two-panel layout is recommended.
+    *   **Left Panel:** A form/input area, broken down into logical sections (Contact, Experience, Education, Skills).
+    *   **Right Panel:** A live, real-time preview of the resume that updates as the user types.
+*   **Interaction:** Use smooth transitions and micro-interactions to provide feedback (e.g., a checkmark when a section is complete). AI suggestions should appear unobtrusively, perhaps as ghost text or in a small pop-up.
+
+### **Pricing Section**
+*   **Layout:** A clean, three-column layout comparing the Free, Pro, and Executive plans.
+*   **Visuals:** Use icons to represent features. Highlight the "Most Popular" plan with a slightly different color or a badge.
+*   **Toggle:** Include a toggle for Monthly/Annual pricing, showing the savings for an annual commitment.
+
+### **Call-to-Action (CTA) Buttons**
+*   **Style:** Buttons should have a clear hover and active state. Use a combination of solid and ghost buttons for primary and secondary actions.
+*   **Wording:** Use action-oriented and persuasive language (e.g., "Unlock All Features," "Get Started," "Choose Plan").
+
+### **Footer**
+*   **Layout:** A well-organized, multi-column layout.
+*   **Content:** Include sections for Product (Features, Pricing), Company (About, Careers), Resources (Blog, FAQ), and Legal (Privacy, Terms). Also, include social media icons.
+
+## 5. Templates
+*   **Design:** Offer a range of modern, classic, and creative resume templates. Ensure they are all professionally designed, ATS-friendly, and visually distinct.
+*   **Customization:** Allow users to change the accent color and font of the template to match their personal brand.
+
