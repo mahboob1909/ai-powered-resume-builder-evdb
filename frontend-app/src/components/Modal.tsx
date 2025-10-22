@@ -56,30 +56,30 @@ const Modal: React.FC<ModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
-      <div 
-        className="absolute inset-0 bg-black bg-opacity-50 dark:bg-opacity-70 transition-opacity duration-300 animate-in fade-in"
+      <div
+        className="absolute inset-0 bg-black/60 dark:bg-black/80 backdrop-blur-sm transition-opacity duration-300 animate-in fade-in"
         onClick={onClose}
       />
-      
+
       {/* Modal */}
-      <div className={`relative bg-white dark:bg-gray-800 rounded-xl shadow-2xl w-full ${sizeClasses[size]} max-h-[90vh] overflow-hidden animate-in zoom-in-95 duration-300`}>
+      <div className={`relative bg-white dark:bg-dark-900 rounded-xl shadow-gold-lg border-2 border-brand-gold/20 w-full ${sizeClasses[size]} max-h-[90vh] overflow-hidden animate-in zoom-in-95 duration-300`}>
         {/* Header */}
         {title && (
-          <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
-            <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+          <div className="flex items-center justify-between p-6 border-b-2 border-brand-gold/20">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white">
               {title}
             </h2>
             <button
               onClick={onClose}
-              className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors p-1 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
+              className="text-gray-400 hover:text-brand-gold dark:hover:text-brand-gold transition-colors duration-300 p-1 rounded-lg hover:bg-brand-gold/10"
             >
               <X className="h-5 w-5" />
             </button>
           </div>
         )}
-        
+
         {/* Content */}
-        <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
+        <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)] custom-scrollbar">
           {children}
         </div>
       </div>

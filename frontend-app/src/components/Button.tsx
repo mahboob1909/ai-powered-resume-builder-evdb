@@ -2,7 +2,7 @@ import React, { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Loader2 } from 'lucide-react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger' | 'gold';
   size?: 'sm' | 'md' | 'lg';
   loading?: boolean;
   icon?: ReactNode;
@@ -19,20 +19,21 @@ const Button: React.FC<ButtonProps> = ({
   disabled,
   ...props
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95';
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 dark:focus:ring-offset-dark-950 disabled:opacity-50 disabled:cursor-not-allowed transform hover:scale-105 active:scale-95';
 
   const variantClasses = {
-    primary: 'bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white focus:ring-blue-500 shadow-lg hover:shadow-xl',
-    secondary: 'bg-gray-600 hover:bg-gray-700 dark:bg-gray-500 dark:hover:bg-gray-600 text-white focus:ring-gray-500 shadow-lg hover:shadow-xl',
-    outline: 'border-2 border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 focus:ring-blue-500',
-    ghost: 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:ring-gray-500',
-    danger: 'bg-red-600 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600 text-white focus:ring-red-500 shadow-lg hover:shadow-xl'
+    primary: 'bg-gradient-gold text-dark-950 hover:shadow-gold-lg focus:ring-brand-gold shadow-gold font-bold',
+    secondary: 'bg-dark-900 hover:bg-dark-800 dark:bg-dark-800 dark:hover:bg-dark-700 text-white focus:ring-dark-700 shadow-lg hover:shadow-xl border border-brand-gold/20',
+    outline: 'border-2 border-brand-gold text-brand-pirate-gold dark:text-brand-gold hover:bg-brand-gold/10 dark:hover:bg-brand-gold/5 focus:ring-brand-gold',
+    ghost: 'text-dark-900 dark:text-gray-300 hover:bg-brand-gold/10 dark:hover:bg-brand-gold/5 focus:ring-brand-gold',
+    danger: 'bg-red-600 hover:bg-red-700 dark:bg-red-500 dark:hover:bg-red-600 text-white focus:ring-red-500 shadow-lg hover:shadow-xl',
+    gold: 'bg-brand-gold hover:bg-brand-pirate-gold text-dark-950 focus:ring-brand-gold shadow-gold hover:shadow-gold-lg font-bold'
   };
 
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg'
+    md: 'px-5 py-2.5 text-base',
+    lg: 'px-8 py-3.5 text-lg'
   };
 
   const iconSizeClasses = {

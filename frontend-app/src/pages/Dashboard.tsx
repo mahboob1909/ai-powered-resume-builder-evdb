@@ -66,35 +66,35 @@ const Dashboard: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white dark:from-dark-950 dark:to-dark-900 transition-colors duration-300">
       {/* Header */}
-      <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+      <header className="bg-white/80 dark:bg-dark-900/80 backdrop-blur-md shadow-soft border-b-2 border-brand-gold/20 transition-colors duration-300 sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
-              <FileText className="h-8 w-8 text-blue-600" />
-              <h1 className="text-2xl font-bold text-gray-900 dark:text-white">ResumeAI</h1>
+              <FileText className="h-8 w-8 text-brand-gold" />
+              <h1 className="text-2xl font-bold text-gradient-gold">ResumeAI</h1>
             </div>
             <div className="flex items-center space-x-4">
               <ThemeToggle />
               <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 bg-blue-600 dark:bg-blue-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-semibold">
+                <div className="w-10 h-10 bg-gradient-gold rounded-full flex items-center justify-center shadow-gold">
+                  <span className="text-dark-950 text-sm font-bold">
                     {user?.firstName.charAt(0)}{user?.lastName.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-900 dark:text-white">
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white">
                     {user?.firstName} {user?.lastName}
                   </p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 capitalize">
+                  <p className="text-xs text-brand-pirate-gold dark:text-brand-gold capitalize font-medium">
                     {user?.subscription} plan
                   </p>
                 </div>
               </div>
               <button
                 onClick={logout}
-                className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200 transition-colors"
+                className="text-gray-600 hover:text-brand-gold dark:text-gray-400 dark:hover:text-brand-gold transition-colors duration-300"
               >
                 <Settings className="h-5 w-5" />
               </button>
@@ -107,10 +107,10 @@ const Dashboard: React.FC = () => {
       <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Welcome Section */}
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-            Welcome back, {user?.firstName}!
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+            Welcome back, <span className="text-gradient-gold">{user?.firstName}</span>!
           </h2>
-          <p className="text-gray-600 dark:text-gray-300">
+          <p className="text-gray-600 dark:text-gray-300 text-lg">
             Ready to create your next professional resume?
           </p>
         </div>
@@ -120,36 +120,38 @@ const Dashboard: React.FC = () => {
           <Card
             hover
             onClick={handleCreateResume}
-            className="bg-gradient-to-br from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600 text-white cursor-pointer group"
+            variant="premium"
+            className="bg-gradient-gold text-dark-950 cursor-pointer group shadow-gold hover:shadow-gold-lg"
           >
             <div className="flex items-center justify-between mb-4">
               <Plus className="h-8 w-8" />
               <div className="text-2xl font-bold group-hover:translate-x-1 transition-transform duration-200">→</div>
             </div>
-            <h3 className="text-lg font-semibold mb-2">Create New Resume</h3>
-            <p className="text-blue-100 dark:text-blue-200">Start building your professional resume from scratch</p>
+            <h3 className="text-lg font-bold mb-2">Create New Resume</h3>
+            <p className="text-dark-900/80">Start building your professional resume from scratch</p>
           </Card>
 
           <Card
             hover
             onClick={handleCreateCoverLetter}
-            className="bg-gradient-to-br from-green-600 to-green-700 dark:from-green-500 dark:to-green-600 text-white cursor-pointer group"
+            variant="premium"
+            className="bg-brand-pirate-gold text-white cursor-pointer group shadow-lg hover:shadow-xl"
           >
             <div className="flex items-center justify-between mb-4">
               <Mail className="h-8 w-8" />
-              <div className="text-2xl font-bold text-gray-400 dark:text-gray-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-1 transition-all duration-200">→</div>
+              <div className="text-2xl font-bold group-hover:translate-x-1 transition-transform duration-200">→</div>
             </div>
-            <h3 className="text-lg font-semibold mb-2">Create Cover Letter</h3>
-            <p className="text-green-100 dark:text-green-200">Write compelling cover letters that complement your resume</p>
+            <h3 className="text-lg font-bold mb-2">Create Cover Letter</h3>
+            <p className="text-white/90">Write compelling cover letters that complement your resume</p>
           </Card>
 
-          <Card hover className="bg-gradient-to-br from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 dark:from-orange-600 dark:to-orange-700 dark:hover:from-orange-700 dark:hover:to-orange-800 text-white cursor-pointer group">
+          <Card hover variant="premium" className="bg-brand-yukon-gold text-white cursor-pointer group shadow-lg hover:shadow-xl">
             <div className="flex items-center justify-between mb-4">
               <Crown className="h-8 w-8" />
               <div className="text-2xl font-bold group-hover:translate-x-1 transition-transform duration-200">→</div>
             </div>
-            <h3 className="text-lg font-semibold mb-2">Upgrade to Pro</h3>
-            <p className="text-orange-100 dark:text-orange-200">Unlock premium features and unlimited downloads</p>
+            <h3 className="text-lg font-bold mb-2">Upgrade to Pro</h3>
+            <p className="text-white/90">Unlock premium features and unlimited downloads</p>
           </Card>
         </div>
 
@@ -157,16 +159,16 @@ const Dashboard: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Recent Resumes */}
           <div>
-            <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Recent Resumes</h3>
-          
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 border-l-4 border-brand-gold pl-3">Recent Resumes</h3>
+
             {loading ? (
               <Card className="text-center">
                 <LoadingSpinner size="lg" text="Loading your resumes..." />
               </Card>
             ) : resumes.length === 0 ? (
-              <Card className="text-center">
-                <FileText className="h-12 w-12 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
-                <h4 className="text-lg font-medium text-gray-900 dark:text-white mb-2">No resumes yet</h4>
+              <Card variant="outlined" className="text-center">
+                <FileText className="h-12 w-12 text-brand-gold mx-auto mb-4" />
+                <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">No resumes yet</h4>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Create your first resume to get started on your job search journey.
                 </p>
@@ -181,22 +183,22 @@ const Dashboard: React.FC = () => {
             ) : (
               <div className="space-y-4">
                 {resumes.slice(0, 3).map((resume) => (
-                  <Card key={resume._id} hover className="group">
+                  <Card key={resume._id} hover variant="default" className="group border-l-4 border-brand-gold/30 hover:border-brand-gold">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex-1">
-                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 truncate">
+                        <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2 truncate">
                           {resume.title}
                         </h4>
                         <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-2">
-                          <Calendar className="h-4 w-4 mr-1" />
+                          <Calendar className="h-4 w-4 mr-1 text-brand-gold" />
                           {resume.updatedAt ? formatDate(resume.updatedAt.toString()) : 'Recently updated'}
                         </div>
                         <div className="flex items-center">
-                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 capitalize">
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-brand-gold/20 text-brand-yukon-gold dark:text-brand-gold capitalize">
                             {resume.template}
                           </span>
                           {resume.isPublic && (
-                            <span className="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300">
+                            <span className="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400">
                               Public
                             </span>
                           )}

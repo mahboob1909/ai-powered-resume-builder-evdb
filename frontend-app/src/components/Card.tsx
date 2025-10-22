@@ -6,19 +6,27 @@ interface CardProps {
   hover?: boolean;
   padding?: 'sm' | 'md' | 'lg';
   onClick?: () => void;
+  variant?: 'default' | 'premium' | 'outlined';
 }
 
-const Card: React.FC<CardProps> = ({ 
-  children, 
-  className = '', 
-  hover = false, 
+const Card: React.FC<CardProps> = ({
+  children,
+  className = '',
+  hover = false,
   padding = 'md',
-  onClick 
+  onClick,
+  variant = 'default'
 }) => {
-  const baseClasses = 'bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-200 dark:border-gray-700 transition-all duration-300';
-  
-  const hoverClasses = hover ? 'hover:shadow-lg hover:shadow-gray-200/50 dark:hover:shadow-gray-900/50 hover:-translate-y-1 cursor-pointer' : '';
-  
+  const baseClasses = 'rounded-xl transition-all duration-300';
+
+  const variantClasses = {
+    default: 'bg-white dark:bg-dark-900 shadow-soft border border-gray-200 dark:border-dark-800',
+    premium: 'bg-white dark:bg-dark-900 shadow-gold border-2 border-brand-gold/30 hover:border-brand-gold/60',
+    outlined: 'bg-white/50 dark:bg-dark-900/50 backdrop-blur-sm border-2 border-brand-gold/20 hover:border-brand-gold/40'
+  };
+
+  const hoverClasses = hover ? 'hover:shadow-gold hover:-translate-y-1 cursor-pointer' : '';
+
   const paddingClasses = {
     sm: 'p-4',
     md: 'p-6',
@@ -28,8 +36,8 @@ const Card: React.FC<CardProps> = ({
   const clickableClasses = onClick ? 'cursor-pointer' : '';
 
   return (
-    <div 
-      className={`${baseClasses} ${hoverClasses} ${paddingClasses[padding]} ${clickableClasses} ${className}`}
+    <div
+      className={`${baseClasses} ${variantClasses[variant]} ${hoverClasses} ${paddingClasses[padding]} ${clickableClasses} ${className}`}
       onClick={onClick}
     >
       {children}
